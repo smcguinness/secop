@@ -13,6 +13,9 @@ var UnderwoodClientApp = React.createClass({
   render: function() {
     return (
       <div>
+        <nav className="nav">
+          <p className="logo">Honest Care</p>
+        </nav>
         <RouteHandler />
       </div>
     );

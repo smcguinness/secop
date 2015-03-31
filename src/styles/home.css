@@ -44,3 +44,7 @@
   padding: 50px;
 }
 
+.home .hero .mui-raised-button {
+  position: relative;
+  left: -100px;
+}

@@ -16,7 +16,7 @@ var HomePage = React.createClass({
       <div className='home'>
         <div className='hero'>
           <input type="text" name="search" placeholder="Search Treatments" />
-          <input type="submit" name="submit" />
+          <mui.RaisedButton label='submit' onClick={this.clickSearch} />
         </div>
         <div className='contribute'>
           <h2>Start Helping Others</h2>
@@ -29,11 +29,12 @@ var HomePage = React.createClass({
       </div>
     );
   },
-
+  clickSearch: function(e){
+    this.transitionTo('search');
+  },
   clickContribute: function(e){
-      this.transitionTo('contribute');
-    }
-
+    this.transitionTo('contribute');
+  }
 });
 
 module.exports = HomePage;

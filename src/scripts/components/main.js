@@ -3,6 +3,7 @@
 var UnderwoodClientApp = require('./UnderwoodClientApp');
 var ContributePage = require('./contribute');
 var HomePage = require('./home');
+var SearchPage = require('./search');
 var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
@@ -14,6 +15,7 @@ var Routes = (
   <Route handler={UnderwoodClientApp}>
     <Route name="/" handler={HomePage}/>
     <Route name="/input" handler={InputContainer}/>
+    <Route name="/search" handler={SearchPage}/>
     <Route name="contribute" handler={ContributePage}/>
   </Route>
 );
