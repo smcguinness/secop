@@ -6,4 +6,41 @@
 
 @import "../../node_modules/material-ui/src/less/components.less";
 
+
+.input-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  .mui-checkbox {
+    &.mui-enhanced-switch {
+      width: 97.5%;
+      margin: auto;
+    }
+  }
+  .mui-text-field {
+    &.mui-has-floating-labels {
+      margin-left: 8px; 
+    }
+  }
+}
+
+
+
+
+.cpt-box {
+  width: 20%;
+  display: inline-block;
+}
+
+.cpt-dropdown {
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 100ms linear;
+
+  &.is-open {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 //Your custom app styles

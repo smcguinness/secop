@@ -2,7 +2,9 @@
 
 var React = require('react/addons');
 var Input = require('./input');
-var Checkbox = require('./checkbox');
+var Checkbox = require('material-ui').Checkbox;
+var TextField = require('material-ui').TextField;
+var Paper = require('material-ui').Paper;
 
 // CSS
 // require('../../styles/contribute.css');
@@ -20,28 +22,39 @@ var InputContainer = React.createClass({
   },
 
   render: function() {
-    
-    var style = {
-      position: 'relative',
-      width: '95%'
-    };
 
-    var checkboxStyle = {
-      position: 'relative',
-      display: 'inline-block',
-      width: '20%',
-      margin: '5px'
-    };
+    var dropDown;
+
+    var classes = React.addons.classSet({
+      'cpt-dropdown': true,
+      'is-open': this.state.descriptionOpen
+    });
 
     return (
-      <div style={style} className='input-container'>
-        <div style={checkboxStyle} className="cpt-box">
-          <Checkbox style={{display: 'inline-block'}} placeholder="I Don't Have It" onClick={this.showDescriptionInput} />
-          <input style={{width: '90%', display: 'inline-block', marginLeft: '5px'}} placeholder="CPT or Description"/>
+      <div className='input-container'>
+        <div className = "cpt-box">
+          <TextField
+            hintText="CPT"
+            floatingLabelText="CPT" />
+          <Checkbox
+            onCheck={this.showDescriptionInput}
+            name="noCPT"
+            label="I Don't Have My CPT" />
+          <Paper className={classes}>
+            <TextField
+              hintText="X-Ray, MRI, Anal Probe..."
+              floatingLabelText="Description of Procedure" />
+          </Paper>
         </div>
-        <Input placeholder="Cost"/>
-        <Input placeholder="Hospital"/>
-        <Input placeholder="Doctor"/>
+        <TextField
+          hintText="Cost"
+          floatingLabelText="Cost" />
+        <TextField
+          hintText="Hospital"
+          floatingLabelText="Hospital" />
+        <TextField
+          hintText="Doctor"
+          floatingLabelText="Doctor" />
       </div>
     );
   }
