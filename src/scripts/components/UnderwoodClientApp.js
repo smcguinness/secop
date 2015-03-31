@@ -7,9 +7,7 @@ var RouteHandler = Router.RouteHandler;
 
 // CSS
 require('../../styles/normalize.css');
-require('../../styles/main.css');
-
-var imageURL = require('../../images/yeoman.png');
+require('../../styles/main.less');
 
 var UnderwoodClientApp = React.createClass({
   render: function() {
