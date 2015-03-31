@@ -1,7 +1,7 @@
 'use strict';
 
 var UnderwoodClientApp = require('./UnderwoodClientApp');
-var ContributePage = require('./contribute-page');
+var ContributePage = require('./contribute');
 var HomePage = require('./home');
 var React = require('react');
 var Router = require('react-router');
