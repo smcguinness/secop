@@ -12,7 +12,8 @@ var content = document.getElementById('content');
 
 var Routes = (
   <Route handler={UnderwoodClientApp}>
-    <Route name="/" handler={InputContainer}/>
+    <Route name="/" handler={HomePage}/>
+    <Route name="/input" handler={InputContainer}/>
     <Route name="contribute" handler={ContributePage}/>
   </Route>
 );

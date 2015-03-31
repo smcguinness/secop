@@ -26,13 +26,19 @@ var ContributePage = React.createClass({
     for (var i = 0; i < this.state.procedureCount; i++) {
       procedures.push(<p>Procedure ... </p>);
     }
+    var styles = {
+      'padding-left': '20px'
+    };
 
     return (
-      <div className='contribute'>
+      <div style={styles}>
         <p>Please enter a description of medical services rendered ...</p>
-        <mui.TextField valueLink={this.linkState('description')} />
+        <mui.TextField
+          hintText="Description ..."
+          multiLine={true}
+          valueLink={this.linkState('description')} />
         {procedures}
-        <button onClick={this._handleAdd}>Add</button>
+        <mui.RaisedButton label="Add" primary={true} onClick={this._handleAdd} />
       </div>
     );
   },
