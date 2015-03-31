@@ -15,11 +15,9 @@ var CPTResultsStore = Backbone.Model.extend({
 
     var pl = action.payload;
 
-    console.log('dispatch');
-
     switch (action.type) {
       case CPTSearchActions.Types.SEARCH_FOR_CPT:
-        $.post('/proxy/cpt/search', { description: pl.search }, function(data){
+        $.post('/proxy/cpt/search', { description: pl.input }, function(data){
           console.log(data);
         });
         break;
