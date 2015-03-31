@@ -3,7 +3,7 @@
 var Dispatcher = require('../app-dispatcher');
 var keyMirror = require('react/lib/keyMirror');
 
-var BillActions = {
+var CPTSearchActions = {
 
   Types: keyMirror({
     SEARCH_FOR_CPT: null
@@ -17,4 +17,4 @@ var BillActions = {
 
 };
 
-module.exports = BillActions;
+module.exports = CPTSearchActions;

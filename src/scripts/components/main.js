@@ -8,6 +8,7 @@ var Router = require('react-router');
 var Route = Router.Route;
 var InputContainer = require('./input/input-container');
 var BillStore = require('../stores/bill-store');
+var CPTResultsStore = require('../stores/cpt-results-store');
 
 var content = document.getElementById('content');
 

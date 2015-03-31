@@ -3,6 +3,7 @@
 var Backbone = require('backbone');
 var Dispatcher = require('../app-dispatcher');
 var CPTSearchActions = require('../actions/cpt-search-action');
+var $ = Backbone.$;
 
 var CPTResultsStore = Backbone.Model.extend({
 
@@ -13,6 +14,8 @@ var CPTResultsStore = Backbone.Model.extend({
   onDispatched: function(action) {
 
     var pl = action.payload;
+
+    console.log('dispatch');
 
     switch (action.type) {
       case CPTSearchActions.Types.SEARCH_FOR_CPT:
