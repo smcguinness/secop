@@ -6,12 +6,8 @@ var port = process.env.PORT || 8080;
 
 app.use(apiRouter);
 
-app.use(express.static(__dirname + '/../dist'));
-
-// app.get('/', function(req, res){
-//   req.send('../dist/index.html');
-// });
+app.use(express.static(path.join(__dirname, '../dist')));
 
 app.listen(port, function(){
-  console.log("listening on" + port);
+  console.log("listening on " + port);
 });
