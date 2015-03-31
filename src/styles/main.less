@@ -7,7 +7,51 @@
 @import "../../node_modules/material-ui/src/less/components.less";
 @import "nav.less";
 
+
+.input-container {
+  margin-bottom: 12px;
+  .mui-text-field {
+    &.mui-has-floating-labels {
+      margin-right: 8px; 
+    }
+  }
+  &:last-child {
+    margin-bottom: 48px;
+  }
+}
+
+
+
+
+.cpt-box {
+  // width: 20%;
+  .mui-checkbox-icon {
+    display: none;
+  }
+  display: inline-block;
+}
+
+.cpt-dropdown {
+  background-color: white;
+  z-index: 200;
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 100ms linear;
+
+  &.is-open {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 //Your custom app styles
+
+
+.add-procedure-button {
+  margin-top: 72px;
+  margin-bottom: 24px;
+  margin-right: 24px;
+}
 
 .button {
   padding: 20px;
