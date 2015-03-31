@@ -1,12 +1,14 @@
 'use strict';
 
 var React = require('react/addons');
+var Dispatcher = require('../../app-dispatcher')
 var _ = require('underscore');
 var Input = require('./input');
 var ClickAwayable = require('material-ui/src/js/mixins/click-awayable');
 var Checkbox = require('material-ui').Checkbox;
 var TextField = require('material-ui').TextField;
 var Paper = require('material-ui').Paper;
+var CPTActions = require('../../actions/cpt-search-action');
 
 // CSS
 // require('../../styles/contribute.css');
@@ -30,11 +32,10 @@ var InputContainer = React.createClass({
   },
 
   searchCPT: _.debounce(function(input){
-    Dispatcher.dispatchAction(Dispatcher.ActionTypes.SEARCH_FOR_CPT, input);
+    CPTActions.searchCPTCodes(input);
   }, 400),
 
   searchCPTCodes: function(event){
-    console.log(event.target.value);
     this.searchCPT(event.target.value);
   },
 
