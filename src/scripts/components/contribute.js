@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react/addons');
+var mui = require('material-ui');
 
 // CSS
 require('../../styles/contribute.css');
@@ -24,12 +25,12 @@ var ContributePage = React.createClass({
     var procedures = [];
     for (var i = 0; i < this.state.procedureCount; i++) {
       procedures.push(<p>Procedure ... </p>);
-    };
+    }
 
     return (
       <div className='contribute'>
         <p>Please enter a description of medical services rendered ...</p>
-        <textarea valueLink={this.linkState('description')} />
+        <mui.TextField valueLink={this.linkState('description')} />
         {procedures}
         <button onClick={this._handleAdd}>Add</button>
       </div>
