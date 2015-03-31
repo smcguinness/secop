@@ -39,3 +39,16 @@ html, body {
 .fade-leave.fade-leave-active {
   opacity: 0.01;
 }
+
+.input-container {
+  position: relative;
+  width: 95%;
+
+}
+
+.input {
+ display: inline-block;
+ margin: 5px;
+ width: 25%; 
+ position: relative;
+}
