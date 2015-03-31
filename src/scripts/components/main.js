@@ -7,6 +7,7 @@ var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
 var InputContainer = require('./input/input-container');
+var BillStore = require('../stores/bill-store');
 
 var content = document.getElementById('content');
 
